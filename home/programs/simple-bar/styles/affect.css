@@ -1,0 +1,9 @@
+.user-widget--1 {
+  order: 2;
+}
+.memory__pie {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}

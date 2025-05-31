@@ -1,0 +1,31 @@
+copy_on_select true
+default_mode "normal"
+on_force_close "quit"
+pane_frames true
+rounded_corners true
+scroll_buffer_size 50000
+show_startup_tips false
+simplified_ui false
+
+ui {
+  pane_frames {
+    rounded_corners true
+  }
+}
+
+keybinds {
+  move {
+    bind "Ctrl b" { SwitchToMode "Normal"; }
+  }
+  shared_except "move" "locked" {
+    bind "Ctrl b" { SwitchToMode "Move"; }
+  }
+  shared_except "locked" {
+    bind "Alt Shift h" "Alt Shift Left" { MoveFocusOrTab "Left"; }
+    bind "Alt Shift l" "Alt Shift Right" { MoveFocusOrTab "Right"; }
+    bind "Alt Shift j" "Alt Shift Down" { MoveFocus "Down"; }
+    bind "Alt Shift k" "Alt Shift Up" { MoveFocus "Up"; }
+    bind "Alt [" { PreviousSwapLayout; }
+    bind "Alt ]" { NextSwapLayout; }
+}
+}

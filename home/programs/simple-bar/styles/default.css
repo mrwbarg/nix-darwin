@@ -1,0 +1,26 @@
+.time__icon {
+  position: relative;
+  flex: 0 0 13px;
+  width: 13px;
+  height: 13px;
+  margin-right: 7px;
+  border: 1px solid var(--background);
+  border-radius: 50%;
+}
+.process__skhd-mode {
+  display: flex;
+  align-items: center;
+  padding: var(--item-inner-margin);
+  color: var(--foreground);
+  background-color: var(--minor) !important;
+  font-family: var(--font);
+  font-size: var(--font-size);
+  border-radius: var(--item-radius);
+  box-shadow: var(--light-shadow);
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.weather {
+  order: 1;
+}

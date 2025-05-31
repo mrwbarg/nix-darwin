@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$TUPLE_TRIGGER_IS_SELF" = "true" ]; then
+  if ! pgrep -x "KeyCastr" > /dev/null; then
+    open -a "KeyCastr"
+  fi
+fi
