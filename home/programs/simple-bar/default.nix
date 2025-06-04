@@ -8,7 +8,7 @@ let
     owner = "Jean-Tinland";
     repo = "simple-bar";
     rev = "master";
-    sha256 = "sha256-r1Efp+VZKTerUFFVCDU7aa9kbKogbFm0D1pn2CnIYVU=";
+    sha256 = "sha256-32KHCzOMWPsUmfOBwrGIVKgTAD2dPrxE1ghpw1QVmGo=";
   };
   simpleBarDestinationFolder = "${config.paths.simpleBarFolder}";
 in
