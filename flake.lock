@@ -411,11 +411,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1748852332,
-        "narHash": "sha256-r/wVJWmLYEqvrJKnL48r90Wn9HWX9SHFt6s4LhuTh7k=",
+        "lastModified": 1749059741,
+        "narHash": "sha256-gB+7N5AY6/ZG2T0SceMdHM90C5ybGoKUquBN6+Mrhx8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a8167f3cc2f991dd4d0055746df53dae5fd0c953",
+        "rev": "29bd828a262a682ef0c9bbb1057785a026d1e829",
         "type": "github"
       },
       "original": {
@@ -476,10 +476,10 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1748985882,
+        "lastModified": 1749129052,
         "narHash": "sha256-GHVofcwM3MEJVzlrfYTaB9ahVO5oUR3yY9E4geTybSU=",
         "ref": "refs/heads/main",
-        "rev": "6c33237c5338516d6847b66a06a0eb5bdc87605b",
+        "rev": "c1c0df03193f7c0b323e8c0ade022e5402ead695",
         "revCount": 6,
         "type": "git",
         "url": "ssh://git@github.com/mrwbarg/nix-private"
@@ -566,11 +566,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1748971039,
-        "narHash": "sha256-vB57L1K/q42f4x2VfdUAKqN1XpfPYvTubRb1aZDmFcI=",
+        "lastModified": 1749058304,
+        "narHash": "sha256-8fUXBczmQ7/Y8nrc988oaN4M7YZz/RbzZa0n1d8i3GM=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "f756c257890a04b4d743b2165efaebad8e651978",
+        "rev": "689d4db89d3be6fd82b7dcb41a1cea5c4743b1ef",
         "type": "github"
       },
       "original": {
