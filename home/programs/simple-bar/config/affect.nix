@@ -8,6 +8,13 @@ let
   defaultCss = builtins.readFile ../styles/default.css;
 in
 {
+
+  global = {
+    compactMode = false;
+    fontSize = "14px";
+    floatingBar = false;
+  };
+
   widgets = {
     netstatsWidget = true;
     cpuWidget = true;
