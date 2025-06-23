@@ -67,6 +67,9 @@
     };
     "editor.defaultFormatter" = "charliermarsh.ruff";
   };
+  "[typescriptreact]" = {
+    "editor.defaultFormatter" = "esbenp.prettier-vscode";
+  };
 
   # vim mode
   "vim.easymotion" = true;
