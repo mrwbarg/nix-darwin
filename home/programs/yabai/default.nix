@@ -19,7 +19,7 @@ in
       mouse_modifier = "alt";
       mouse_action1 = "move";
       mouse_action2 = "resize";
-      focus_follows_mouse = "autofocus";
+      focus_follows_mouse = "off";
 
       # gaps
       top_padding = 5;
