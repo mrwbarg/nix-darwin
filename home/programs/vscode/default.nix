@@ -28,10 +28,12 @@
           ms-python.vscode-pylance
           charliermarsh.ruff
           golang.go
+          dbaeumer.vscode-eslint
 
           # general
           vscodevim.vim
           eamodio.gitlens
+          aaron-bond.better-comments
         ]
         ++ [
           (pkgs.vscode-utils.extensionFromVscodeMarketplace {
