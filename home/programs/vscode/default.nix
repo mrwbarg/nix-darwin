@@ -20,6 +20,7 @@
           file-icons.file-icons
           usernamehw.errorlens
           github.copilot
+          github.copilot-chat
 
           # languages
           jnoortheen.nix-ide
