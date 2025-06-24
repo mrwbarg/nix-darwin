@@ -5,7 +5,7 @@
 
     onActivation = {
       # "zap" removes manually installed brews and casks
-      # cleanup = "zap";
+      cleanup = "zap";
       autoUpdate = true;
       upgrade = true;
     };

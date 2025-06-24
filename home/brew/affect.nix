@@ -4,9 +4,9 @@
     casks = [
       "tuple"
       "dbeaver-community"
-      "tailscale"
+      "tailscale-app"
       "keycastr"
-      "docker"
+      "docker-desktop"
       "aptible"
     ];
   };

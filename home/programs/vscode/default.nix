@@ -7,7 +7,7 @@
 {
   programs.vscode = {
     enable = true;
-    mutableExtensionsDir = false;
+    mutableExtensionsDir = true;
     package = import ./extras/overlay.nix {
       inherit pkgs config;
     };

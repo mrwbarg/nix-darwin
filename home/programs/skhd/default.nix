@@ -38,10 +38,12 @@ in
         alt - l : ${yabai} -m window --focus east
         alt - right : ${yabai} -m window --focus east
 
-        ctrl - h : ${yabai} -m space --focus prev
-        ctrl - left : ${yabai} -m space --focus prev
-        ctrl - l : ${yabai} -m space --focus next
-        ctrl - right : ${yabai} -m space --focus next
+        # gets rid of the transition animations for desktop switching
+        # and works with multiple displays
+        ctrl - h : bash -c 's=$(${yabai} -m query --spaces --space); d=$(echo $s | jq .display); i=$(echo $s | jq .index); a=$(${yabai} -m query --spaces | jq "[.[] | select(.display == $d)] | map(.index)"); p=$(echo $a | jq "index($i)"); [ "$p" -gt 0 ] && t=$(echo $a | jq ".[$p - 1]") && ${yabai} -m space --focus "$t"'
+        ctrl - left : bash -c 's=$(${yabai} -m query --spaces --space); d=$(echo $s | jq .display); i=$(echo $s | jq .index); a=$(${yabai} -m query --spaces | jq "[.[] | select(.display == $d)] | map(.index)"); p=$(echo $a | jq "index($i)"); [ "$p" -gt 0 ] && t=$(echo $a | jq ".[$p - 1]") && ${yabai} -m space --focus "$t"'
+        ctrl - l : bash -c 's=$(${yabai} -m query --spaces --space); d=$(echo $s | jq .display); i=$(echo $s | jq .index); a=$(${yabai} -m query --spaces | jq "[.[] | select(.display == $d)] | map(.index)"); p=$(echo $a | jq "index($i)"); count=$(echo $a | jq "length"); [ "$p" -lt $((count - 1)) ] && t=$(echo $a | jq ".[$p + 1]") && ${yabai} -m space --focus "$t"'
+        ctrl - right : bash -c 's=$(${yabai} -m query --spaces --space); d=$(echo $s | jq .display); i=$(echo $s | jq .index); a=$(${yabai} -m query --spaces | jq "[.[] | select(.display == $d)] | map(.index)"); p=$(echo $a | jq "index($i)"); count=$(echo $a | jq "length"); [ "$p" -lt $((count - 1)) ] && t=$(echo $a | jq ".[$p + 1]") && ${yabai} -m space --focus "$t"'
 
         # move mode
         move < escape ; default
