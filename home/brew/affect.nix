@@ -8,6 +8,7 @@
       "keycastr"
       "docker-desktop"
       "aptible"
+      "licecap"
     ];
   };
 }
