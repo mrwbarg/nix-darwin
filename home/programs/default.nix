@@ -46,6 +46,7 @@
         maccy
         thunderbird
         neofetch
+        biome
       ];
 
       programs = {

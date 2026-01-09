@@ -6,23 +6,25 @@ in
 {
   programs.git = {
     enable = true;
+    settings = {
+      user = {
+        name = "Mauricio Barg";
+        email = "${email}";
+      };
 
-    userName = "Mauricio Barg";
-    userEmail = "${email}";
+      alias = {
+        co = "checkout";
+        br = "branch";
+        ci = "commit";
+        st = "status";
+        lg = "log --oneline --graph --decorate";
+      };
 
-    extraConfig = {
       core.editor = "${pkgs.neovim}/bin/nvim";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
     };
 
-    aliases = {
-      co = "checkout";
-      br = "branch";
-      ci = "commit";
-      st = "status";
-      lg = "log --oneline --graph --decorate";
-    };
   };
 }
