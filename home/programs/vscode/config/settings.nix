@@ -68,10 +68,16 @@
     "editor.defaultFormatter" = "charliermarsh.ruff";
   };
   "[typescriptreact]" = {
-    "editor.defaultFormatter" = "esbenp.prettier-vscode";
+    "editor.defaultFormatter" = "biomejs.biome";
+    "editor.codeActionsOnSave" = {
+      "source.organizeImports.biome" = "explicit";
+    };
   };
   "[typescript]" = {
-    "editor.defaultFormatter" = "esbenp.prettier-vscode";
+    "editor.defaultFormatter" = "biomejs.biome";
+    "editor.codeActionsOnSave" = {
+      "source.organizeImports.biome" = "explicit";
+    };
   };
 
   # vim mode
