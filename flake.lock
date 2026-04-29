@@ -278,11 +278,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1756679287,
-        "narHash": "sha256-Xd1vOeY9ccDf5VtVK12yM0FS6qqvfUop8UQlxEB+gTQ=",
+        "lastModified": 1763992789,
+        "narHash": "sha256-WHkdBlw6oyxXIra/vQPYLtqY+3G8dUVZM8bEXk0t8x4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "07fc025fe10487dd80f2ec694f1cd790e752d0e8",
+        "rev": "44831a7eaba4360fb81f2acc5ea6de5fde90aaa3",
         "type": "github"
       },
       "original": {
@@ -481,11 +481,11 @@
         "sops-nix": "sops-nix"
       },
       "locked": {
-        "lastModified": 1757338507,
-        "narHash": "sha256-S65b9iwoN9i0a8XIysCK9eyFatGKREcGB3kmrdfeOsY=",
+        "lastModified": 1777505782,
+        "narHash": "sha256-QVRqJq8ruvxWMlkCNjjRjUY1UzJGeuefajxUJfxp5F0=",
         "ref": "refs/heads/main",
-        "rev": "f9dd07f7a71e96bb8ba77403e8f9e33e63ade237",
-        "revCount": 12,
+        "rev": "931e5fc5267d99168240d703ce21618e10bd6d61",
+        "revCount": 14,
         "type": "git",
         "url": "ssh://git@github.com/mrwbarg/nix-private"
       },
@@ -534,11 +534,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1754988908,
-        "narHash": "sha256-t+voe2961vCgrzPFtZxha0/kmFSHFobzF00sT8p9h0U=",
+        "lastModified": 1776771786,
+        "narHash": "sha256-DRFGPfFV6hbrfO9a1PH1FkCi7qR5FgjSqsQGGvk1rdI=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "3223c7a92724b5d804e9988c6b447a0d09017d48",
+        "rev": "bef289e2248991f7afeb95965c82fbcd8ff72598",
         "type": "github"
       },
       "original": {
