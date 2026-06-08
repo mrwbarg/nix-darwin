@@ -30,7 +30,7 @@
       home = {
         homeDirectory = "${user.homeDirectory}";
         username = "${user.username}";
-        stateVersion = "25.05";
+        stateVersion = "26.05";
 
         file.".wallpapers".source = ../wallpapers;
       };
