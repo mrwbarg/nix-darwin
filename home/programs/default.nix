@@ -62,6 +62,9 @@
         };
         neovim = {
           enable = true;
+          plugins = with pkgs.vimPlugins; [
+            mini-nvim
+          ];
         };
 
       };

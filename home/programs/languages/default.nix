@@ -9,7 +9,7 @@
     go
     gopls
 
-    nixfmt-rfc-style
+    nixfmt
     nixd
   ];
 }

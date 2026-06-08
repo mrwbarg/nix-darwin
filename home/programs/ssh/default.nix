@@ -7,14 +7,10 @@ in
     enable = true;
     enableDefaultConfig = false;
 
-    settings = {
-      Host = {
-        "github.com" = {
-          User = "git";
-          IdentityFile = sshKeyPath;
-          AddKeysToAgent = "yes";
-        };
-      };
+    settings."github.com" = {
+      User = "git";
+      IdentityFile = sshKeyPath;
+      AddKeysToAgent = "yes";
     };
   };
 }
