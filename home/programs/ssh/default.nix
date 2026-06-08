@@ -7,11 +7,13 @@ in
     enable = true;
     enableDefaultConfig = false;
 
-    matchBlocks = {
-      "github.com" = {
-        user = "git";
-        identityFile = sshKeyPath;
-        addKeysToAgent = "yes";
+    settings = {
+      Host = {
+        "github.com" = {
+          User = "git";
+          IdentityFile = sshKeyPath;
+          AddKeysToAgent = "yes";
+        };
       };
     };
   };

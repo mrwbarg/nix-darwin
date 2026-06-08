@@ -45,11 +45,14 @@
         bruno
         maccy
         thunderbird
-        neofetch
+        fastfetch
         biome
       ];
 
       programs = {
+        man = {
+          generateCaches = false;
+        };
         btop = {
           enable = true;
         };
