@@ -8,6 +8,7 @@
       cleanup = "zap";
       autoUpdate = true;
       upgrade = true;
+      extraFlags = [ "--force" ];
     };
 
     caskArgs = {
@@ -17,7 +18,6 @@
 
     casks = [
       "ubersicht"
-      "opencode"
     ];
   };
 }
