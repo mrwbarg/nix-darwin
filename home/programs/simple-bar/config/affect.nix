@@ -13,6 +13,10 @@ in
     compactMode = false;
     fontSize = "14px";
     floatingBar = false;
+    aerospacePath = "${pkgs.aerospace}/bin/aerospace";
+    windowManager = "aerospace";
+    aerospaceServerRefresh = true;
+    yabaiServerRefresh = false;
   };
 
   widgets = {
