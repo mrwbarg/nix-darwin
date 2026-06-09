@@ -18,6 +18,8 @@ in
         ci = "commit";
         st = "status";
         lg = "log --oneline --graph --decorate";
+        am = "commit --amend --noedit";
+        pickaxe = "log -p - S";
       };
 
       core.editor = "${pkgs.neovim}/bin/nvim";
@@ -26,5 +28,9 @@ in
       push.autoSetupRemote = true;
     };
 
+    ignores = [
+      ".DS_Store"
+      ".omc"
+    ];
   };
 }
