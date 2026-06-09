@@ -25,7 +25,7 @@ in
           left = 5;
           bottom = 5;
           right = 5;
-          top = if enableSimpleBar then 35 else 10;
+          top = if enableSimpleBar then 40 else 5;
         };
       };
 
