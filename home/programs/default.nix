@@ -38,6 +38,7 @@
         btop
         direnv
         fish
+        opencode
         jq
         xplr
         zellij

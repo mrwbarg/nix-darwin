@@ -12,8 +12,8 @@
       inherit pkgs config;
     };
     profiles.default = {
-      enableUpdateCheck = true;
-      enableExtensionUpdateCheck = true;
+      enableUpdateCheck = false;
+      enableExtensionUpdateCheck = false;
       extensions =
         with pkgs.vscode-extensions;
         [
@@ -47,6 +47,12 @@
             version = "2.1.3";
             publisher = "kdl-org";
             sha256 = "sha256-Jssmb5owrgNWlmLFSKCgqMJKp3sPpOrlEUBwzZSSpbM=";
+          })
+          (pkgs.vscode-utils.extensionFromVscodeMarketplace {
+            name = "opencode";
+            version = "0.0.13";
+            publisher = "sst-dev";
+            sha256 = "sha256-6adXUaoh/OP5yYItH3GAQ7GpupfmTGaxkKP6hYUMYNQ=";
           })
         ];
       userSettings = import ./config/settings.nix {
