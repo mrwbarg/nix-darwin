@@ -11,7 +11,7 @@ in
       userName = "${email}";
       flavor = "gmail.com";
       primary = true;
-      thunderbird.enable = true;
+      # thunderbird.enable = true;
     };
   };
 }

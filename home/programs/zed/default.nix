@@ -7,9 +7,12 @@
       "toml"
       "docker"
       "ruff"
+      "opencode"
+      "copilot"
     ];
     extraPackages = with pkgs; [
       nixd
+      nil
       ruff
       biome
       go
@@ -42,6 +45,9 @@
         inline_completion_provider = "copilot";
       };
       terminal = {
+        shell = {
+          program = "fish";
+        };
         alternate_scroll = "off";
         blinking = "off";
       };

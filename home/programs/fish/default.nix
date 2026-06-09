@@ -15,6 +15,9 @@
       export GOPATH="$HOME/go"
       export PATH="$GOPATH/bin:$PATH"
       export PATH="/opt/homebrew/bin:$PATH"
+
+      # Fix plugin conflicts where fish_key_bindings variable is set to empty
+      set -e fish_key_bindings
     '';
 
     plugins = with pkgs.fishPlugins; [

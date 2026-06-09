@@ -20,25 +20,24 @@ in
     { pkgs, ... }:
 
     {
-      imports =
-        [
-          ./zellij
-          ./alacritty
-          ./fish
-          ./starship
-          ./stylix
-          ./ssh
-          ./git
-          ./vscode
-          ./zed
-          ./languages
-          ./brave
-          ./flameshot
-          ./thunderbird
-        ]
-        ++ lib.optionals enableSimpleBar [
-          ./simple-bar
-        ];
+      imports = [
+        ./zellij
+        ./alacritty
+        ./fish
+        ./starship
+        ./stylix
+        ./ssh
+        ./git
+        ./vscode
+        ./zed
+        ./languages
+        ./brave
+        ./flameshot
+        ./thunderbird
+      ]
+      ++ lib.optionals enableSimpleBar [
+        ./simple-bar
+      ];
 
       home.packages = with pkgs; [
         alacritty
@@ -52,7 +51,7 @@ in
         zjstatus
         bruno
         maccy
-        thunderbird
+        # thunderbird
         fastfetch
         biome
       ];

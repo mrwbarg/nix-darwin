@@ -14,7 +14,7 @@
   {
     context = "Workspace";
     bindings = {
-      "ctrl-;" = "workspace::ToggleTerminal";
+      "ctrl-;" = "terminal_panel::ToggleFocus";
     };
   }
 
@@ -30,8 +30,8 @@
   {
     context = "Editor";
     bindings = {
-      "alt-[" = "editor::GoBack";
-      "alt-]" = "editor::GoForward";
+      "alt-[" = "pane::GoBack";
+      "alt-]" = "pane::GoForward";
     };
   }
 
@@ -39,7 +39,7 @@
   {
     context = "Workspace";
     bindings = {
-      "ctrl-shift-f" = "workspace::ToggleSearch";
+      "ctrl-shift-f" = "project_search::ToggleFocus";
     };
   }
 
@@ -47,7 +47,7 @@
   {
     context = "Workspace";
     bindings = {
-      "cmd-shift-e" = "workspace::ToggleLeftSidebar";
+      "cmd-shift-e" = "project_panel::ToggleFocus";
     };
   }
 
@@ -55,10 +55,10 @@
   {
     context = "Workspace";
     bindings = {
-      "cmd-k cmd-left" = [ "workspace::SplitPane" "Left" ];
-      "cmd-k cmd-right" = [ "workspace::SplitPane" "Right" ];
-      "cmd-k cmd-up" = [ "workspace::SplitPane" "Up" ];
-      "cmd-k cmd-down" = [ "workspace::SplitPane" "Down" ];
+      "cmd-k cmd-h" = "pane::SplitLeft";
+      "cmd-k cmd-l" = "pane::SplitRight";
+      "cmd-k cmd-k" = "pane::SplitUp";
+      "cmd-k cmd-j" = "pane::SplitDown";
     };
   }
 
@@ -75,6 +75,30 @@
     context = "Editor";
     bindings = {
       "alt-shift-r" = "editor::RevealInFileManager";
+    };
+  }
+
+  # Agent/assistant panel
+  {
+    context = "Workspace";
+    bindings = {
+      "cmd-shift-a" = "assistant::ToggleFocus";
+    };
+  }
+
+  # Version control / git panel
+  {
+    context = "Workspace";
+    bindings = {
+      "cmd-k cmd-g" = "git_panel::ToggleFocus";
+    };
+  }
+
+  # Copy relative file path
+  {
+    context = "Editor";
+    bindings = {
+      "cmd-k cmd-f" = "editor::CopyPath";
     };
   }
 ]

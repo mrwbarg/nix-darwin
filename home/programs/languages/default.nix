@@ -11,5 +11,6 @@
 
     nixfmt
     nixd
+    nil
   ];
 }

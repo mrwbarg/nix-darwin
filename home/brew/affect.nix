@@ -5,7 +5,7 @@
       "tuple"
       "dbeaver-community"
       "tailscale-app"
-      "keycastr"
+      # "keycastr"
       "docker-desktop"
       "aptible"
       "licecap"

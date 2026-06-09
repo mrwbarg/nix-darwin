@@ -15,7 +15,7 @@
     {
       imports = [
         ./misc/aliases/affect.nix
-        ./misc/tuple-triggers
+        # ./misc/tuple-triggers
         ./accounts/affect.nix
       ];
     };
