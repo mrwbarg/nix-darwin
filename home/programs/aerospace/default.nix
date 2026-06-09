@@ -25,25 +25,33 @@ in
           left = 5;
           bottom = 5;
           right = 5;
-          top = if enableSimpleBar then 35 else 5;
+          top = if enableSimpleBar then 35 else 10;
         };
       };
 
       on-window-detected = [
         {
-          "if" = { "app-id" = "com.apple.systempreferences"; };
+          "if" = {
+            "app-id" = "com.apple.systempreferences";
+          };
           run = "layout floating";
         }
         {
-          "if" = { "app-id" = "com.apple.calculator"; };
+          "if" = {
+            "app-id" = "com.apple.calculator";
+          };
           run = "layout floating";
         }
         {
-          "if" = { "app-id" = "com.apple.appstore"; };
+          "if" = {
+            "app-id" = "com.apple.appstore";
+          };
           run = "layout floating";
         }
         {
-          "if" = { "app-id" = "com.apple.ActivityMonitor"; };
+          "if" = {
+            "app-id" = "com.apple.ActivityMonitor";
+          };
           run = "layout floating";
         }
       ];
