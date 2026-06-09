@@ -18,8 +18,8 @@ in
         ci = "commit";
         st = "status";
         lg = "log --oneline --graph --decorate";
-        am = "commit --amend --noedit";
-        pickaxe = "log -p - S";
+        noedit = "commit --amend --noedit";
+        pickaxe = "log -S";
       };
 
       core.editor = "${pkgs.neovim}/bin/nvim";
