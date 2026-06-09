@@ -12,8 +12,8 @@
       inherit pkgs config;
     };
     profiles.default = {
-      enableUpdateCheck = false;
-      enableExtensionUpdateCheck = false;
+      enableUpdateCheck = true;
+      enableExtensionUpdateCheck = true;
       extensions =
         with pkgs.vscode-extensions;
         [
