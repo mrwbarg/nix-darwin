@@ -1,12 +1,15 @@
 {
   user,
   pkgs,
+  lib,
   ...
 }:
+let
+  enableSimpleBar = user.enableSimpleBar or true;
+in
 {
   imports = [
-    ./yabai
-    ./skhd
+    ./aerospace
   ];
 
   # enable stylix outside of home-manager so we can use colors in other apps
@@ -17,21 +20,25 @@
     { pkgs, ... }:
 
     {
-      imports = [
-        ./zellij
-        ./alacritty
-        ./fish
-        ./starship
-        ./simple-bar
-        ./stylix
-        ./ssh
-        ./git
-        ./vscode
-        ./languages
-        ./brave
-        ./flameshot
-        ./thunderbird
-      ];
+      imports =
+        [
+          ./zellij
+          ./alacritty
+          ./fish
+          ./starship
+          ./stylix
+          ./ssh
+          ./git
+          ./vscode
+          ./zed
+          ./languages
+          ./brave
+          ./flameshot
+          ./thunderbird
+        ]
+        ++ lib.optionals enableSimpleBar [
+          ./simple-bar
+        ];
 
       home.packages = with pkgs; [
         alacritty

@@ -5,7 +5,7 @@
 {
   imports = [
     ./default.nix
-    ./yabai/macbook-pro.nix
+    ./aerospace/macbook-pro.nix
   ];
 
   home-manager.users."${user.username}" =

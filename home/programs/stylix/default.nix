@@ -38,6 +38,7 @@
       starship.enable = true;
       neovim.enable = true;
       vscode.enable = true;
+      zed.enable = true;
     };
   };
 }

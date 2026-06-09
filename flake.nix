@@ -19,6 +19,10 @@
       url = "github:dj95/zjstatus";
     };
     mac-app-util.url = "github:hraban/mac-app-util";
+    simple-bar = {
+      url = "github:Jean-Tinland/simple-bar";
+      flake = false;
+    };
     private = {
       url = "git+ssh://git@github.com/mrwbarg/nix-private";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +36,7 @@
       stylix,
       zjstatus,
       mac-app-util,
+      simple-bar,
       private,
       ...
     }:
@@ -54,10 +59,20 @@
           };
 
           mkDarwinWorkstation =
-            username: hostname: theme:
+            {
+              username,
+              hostname,
+              theme,
+              enableSimpleBar ? true,
+            }:
             let
               user = {
-                inherit username hostname theme;
+                inherit
+                  username
+                  hostname
+                  theme
+                  enableSimpleBar
+                  ;
                 homeDirectory = "/Users/${username}";
               };
               specialArgs = inputs // {
@@ -73,16 +88,27 @@
               modules = [
                 mac-app-util.darwinModules.default
                 stylix.darwinModules.stylix
-                { home-manager.extraSpecialArgs = { inherit user; }; }
+                {
+                  home-manager.extraSpecialArgs = inputs // {
+                    inherit user;
+                  };
+                }
                 (private.mkSecrets user)
                 ./hosts/${hostname}.nix
               ];
             };
         in
         {
-          macbook-pro = mkDarwinWorkstation "mrwbarg" "macbook-pro" "gruvbox-dark-hard";
-          affect = mkDarwinWorkstation "mrwbarg" "affect" "catppuccin-mocha";
+          macbook-pro = mkDarwinWorkstation {
+            username = "mrwbarg";
+            hostname = "macbook-pro";
+            theme = "gruvbox-dark-hard";
+          };
+          affect = mkDarwinWorkstation {
+            username = "mrwbarg";
+            hostname = "affect";
+            theme = "catppuccin-mocha";
+          };
         };
     };
-
 }

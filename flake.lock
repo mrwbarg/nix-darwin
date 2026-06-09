@@ -499,6 +499,7 @@
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs_5",
         "private": "private",
+        "simple-bar": "simple-bar",
         "stylix": "stylix",
         "zjstatus": "zjstatus"
       }
@@ -521,6 +522,22 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "simple-bar": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1780144205,
+        "narHash": "sha256-kQwhTEa2cCik4nSoGddLL/E/SASMhcvkQ8beNnLIWW4=",
+        "owner": "Jean-Tinland",
+        "repo": "simple-bar",
+        "rev": "6c7668d2ec901ca1ac132f099c0b4a4fd6495844",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Jean-Tinland",
+        "repo": "simple-bar",
         "type": "github"
       }
     },

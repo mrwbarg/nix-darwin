@@ -1,4 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, user, ... }:
+let
+  enableSimpleBar = user.enableSimpleBar or true;
+in
 {
   time.timeZone = "America/Sao_Paulo";
   nix.settings.experimental-features = "nix-command flakes";
@@ -9,10 +12,6 @@
   };
 
   system.activationScripts.text =
-    let
-      yabai = "${pkgs.yabai}/bin/yabai";
-      skhd = "${pkgs.skhd}/bin/skhd";
-    in
     ''
       sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
@@ -33,8 +32,6 @@
       defaults write com.apple.assistant.support 'Siri Data Sharing Opt-In Status' -int 2
 
       osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
-      sudo ${yabai} --load-sa
-      ${skhd} --reload
 
       /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
     '';
@@ -46,7 +43,7 @@
 
   system.defaults = {
     NSGlobalDomain = {
-      _HIHideMenuBar = true;
+      _HIHideMenuBar = enableSimpleBar;
       AppleShowAllFiles = true;
       AppleInterfaceStyle = "Dark";
       ApplePressAndHoldEnabled = false;

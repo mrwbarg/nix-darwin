@@ -25,8 +25,8 @@ in
     slidingAnimationPace = 10;
     font = "${font.name}";
     fontSize = "11px";
-    yabaiPath = "${pkgs.yabai}/bin/yabai";
-    windowManager = "yabai";
+    aerospacePath = "${pkgs.aerospace}/bin/aerospace";
+    windowManager = "aerospace";
     shell = "sh";
     terminal = "Terminal";
     disableNotifications = false;
@@ -34,7 +34,7 @@ in
     enableServer = false;
     serverSocketPort = 7777;
     yabaiServerRefresh = false;
-    aerospaceServerRefresh = false;
+    aerospaceServerRefresh = true;
     flashspaceServerRefresh = false;
     inlineSpaceOptions = false;
   };
@@ -67,8 +67,8 @@ in
     hideWindowTitle = false;
     displayOnlyIcon = false;
     expandAllProcesses = false;
-    displaySkhdMode = true;
-    displayStackIndex = true;
+    displaySkhdMode = false;
+    displayStackIndex = false;
     displayOnlyCurrentStack = false;
   };
 
@@ -83,7 +83,7 @@ in
     displayStickyWindowsSeparately = false;
     hideCreateSpaceButton = false;
     hideEmptySpaces = false;
-    showOptionsOnHover = true;
+    showOptionsOnHover = false;
     switchSpacesWithoutYabai = false;
     showOnlyFlashspaceSpaceIndex = false;
     hideFlashspaceAppIcons = false;
