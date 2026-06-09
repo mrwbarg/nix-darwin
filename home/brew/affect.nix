@@ -9,6 +9,7 @@
       "docker-desktop"
       "aptible"
       "licecap"
+      "logseq"
     ];
   };
 }

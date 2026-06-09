@@ -29,7 +29,7 @@
         lazydocker
         slack
         lazygit
-        logseq
+
         scrcpy
         android-tools
       ];
