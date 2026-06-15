@@ -31,6 +31,7 @@ in
     ignores = [
       ".DS_Store"
       ".omc"
+      ".zed"
     ];
   };
 }
