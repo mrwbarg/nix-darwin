@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   services.aerospace = {
     settings = {
+      # No ubersicht bar on this host, so no need for extra top gap.
+      gaps.outer.top = lib.mkForce 5;
+
       on-window-detected = [
         {
           "if" = {

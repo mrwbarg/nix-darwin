@@ -4,6 +4,7 @@
     casks = [
       "bitwarden"
       "docker-desktop"
+      "ubersicht"
     ];
   };
 }

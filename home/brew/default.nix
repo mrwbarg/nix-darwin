@@ -15,8 +15,6 @@
       appdir = "~/Applications";
     };
 
-    casks = [
-      "ubersicht"
-    ];
+    casks = [ ];
   };
 }
