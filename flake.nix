@@ -108,6 +108,7 @@
             username = "mrwbarg";
             hostname = "affect";
             theme = "catppuccin-mocha";
+            enableSimpleBar = false;
           };
         };
     };
