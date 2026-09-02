@@ -1,6 +1,7 @@
 {
   user,
   lib,
+  pkgs,
   ...
 }:
 {
@@ -8,6 +9,20 @@
     ./default.nix
     ./aerospace/affect.nix
   ];
+
+  launchd.user.agents.affect-toolbar = {
+    serviceConfig = {
+      ProgramArguments = [
+        "${pkgs.nix}/bin/nix"
+        "run"
+        "github:affect-therapeutics/toolbar"
+        "--refresh"
+      ];
+      RunAtLoad = true;
+      StandardOutPath = "${user.homeDirectory}/Library/Logs/affect-toolbar.log";
+      StandardErrorPath = "${user.homeDirectory}/Library/Logs/affect-toolbar.log";
+    };
+  };
 
   home-manager.users."${user.username}" =
     { pkgs, ... }:

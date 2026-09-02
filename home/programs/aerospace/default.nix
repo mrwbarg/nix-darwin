@@ -6,7 +6,7 @@ in
   environment.systemPackages = with pkgs; [ aerospace ];
 
   services.aerospace = {
-    enable = true;
+    enable = false;
     settings = {
       enable-normalization-flatten-containers = false;
       enable-normalization-opposite-orientation-for-nested-containers = false;

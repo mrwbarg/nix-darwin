@@ -27,6 +27,10 @@
       url = "git+ssh://git@github.com/mrwbarg/nix-private";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    toolbar = {
+      url = "github:affect-therapeutics/toolbar";
+      flake = false;
+    };
   };
 
   outputs =

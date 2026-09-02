@@ -32,7 +32,6 @@ in
         ./zed
         ./languages
         ./brave
-        ./flameshot
         ./thunderbird
       ]
       ++ lib.optionals enableSimpleBar [

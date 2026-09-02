@@ -15,6 +15,11 @@
       appdir = "~/Applications";
     };
 
-    casks = [ ];
+    taps = [ "BarutSRB/tap" ];
+
+    casks = [
+      "omniwm"
+      "macshot"
+    ];
   };
 }
