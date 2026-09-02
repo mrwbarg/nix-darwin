@@ -28,7 +28,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     toolbar = {
-      url = "github:affect-therapeutics/toolbar";
+      url = "git+ssh://git@github.com/affect-therapeutics/toolbar";
       flake = false;
     };
   };

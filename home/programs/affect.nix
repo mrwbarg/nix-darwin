@@ -15,7 +15,7 @@
       ProgramArguments = [
         "${pkgs.nix}/bin/nix"
         "run"
-        "github:affect-therapeutics/toolbar"
+        "git+ssh://git@github.com/affect-therapeutics/toolbar"
         "--refresh"
       ];
       RunAtLoad = true;
