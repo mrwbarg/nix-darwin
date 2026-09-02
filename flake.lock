@@ -501,6 +501,7 @@
         "private": "private",
         "simple-bar": "simple-bar",
         "stylix": "stylix",
+        "toolbar": "toolbar",
         "zjstatus": "zjstatus"
       }
     },
@@ -718,6 +719,22 @@
         "owner": "tinted-theming",
         "repo": "base16-zed",
         "type": "github"
+      }
+    },
+    "toolbar": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788206181,
+        "narHash": "sha256-IPr5oB16hz/Pea/2cJxbWMjxQZDXB+XKE58wxyrF8rE=",
+        "ref": "refs/heads/main",
+        "rev": "9565e5efe36a9aff65af9a9f225a1d916a7fd18e",
+        "revCount": 4,
+        "type": "git",
+        "url": "ssh://git@github.com/affect-therapeutics/toolbar"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/affect-therapeutics/toolbar"
       }
     },
     "treefmt-nix": {

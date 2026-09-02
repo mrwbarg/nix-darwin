@@ -15,7 +15,12 @@
       appdir = "~/Applications";
     };
 
-    taps = [ "BarutSRB/tap" ];
+    taps = [
+      {
+        name = "BarutSRB/tap";
+        trusted = true;
+      }
+    ];
 
     casks = [
       "omniwm"
