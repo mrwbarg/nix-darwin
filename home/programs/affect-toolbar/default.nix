@@ -1,6 +1,7 @@
-# Builds https://github.com/affect-therapeutics/toolbar into a real,
-# fixed-path Toolbar.app in ~/Applications, so it behaves like any other
-# Mac app: Spotlight-discoverable, killable, and relaunchable by hand.
+# Builds https://github.com/affect-therapeutics/toolbar into a real app
+# bundle at a fixed path (~/Applications/Toolbar.app) and runs it as a
+# launchd agent — not launched via Finder/Dock, just managed as a service.
+# To restart it: `launchctl kickstart -k gui/$(id -u)/org.nix-community.home.affect-toolbar`
 #
 # This can't be a normal Nix derivation: nixpkgs' darwin `swift` doesn't
 # ship SwiftPM, and SwiftPM itself shells out to `sandbox-exec` while
@@ -13,7 +14,7 @@
 { user, toolbar, ... }:
 {
   home-manager.users."${user.username}" =
-    { lib, ... }:
+    { lib, pkgs, ... }:
     {
       home.activation.affectToolbar = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         set -euo pipefail
@@ -21,7 +22,11 @@
         srcDir="$HOME/.cache/toolbar/src"
         appDir="$HOME/Applications/Toolbar.app"
         revFile="$srcDir/.nix-source-hash"
-        newRev="${toolbar.narHash}"
+        # Bump the trailing "recipeN" suffix any time the packaging logic
+        # below changes. Upstream's narHash alone doesn't change when only
+        # *this* file does, so without it a packaging-only edit here would
+        # silently never rebuild the already-installed app.
+        newRev="${toolbar.narHash}-recipe5"
 
         mkdir -p "$srcDir"
 
@@ -79,6 +84,17 @@
         config = {
           Program = "${user.homeDirectory}/Applications/Toolbar.app/Contents/MacOS/Toolbar";
           RunAtLoad = true;
+          # launchd agents don't source the shell profile that normally puts
+          # `gh` on PATH, so the app silently can't find it unless we hand
+          # it an explicit PATH here (pinned to the store path, not the
+          # per-user profile symlink, so it works even if that symlink
+          # hasn't been re-linked yet after a switch).
+          EnvironmentVariables = {
+            PATH = lib.makeBinPath [
+              pkgs.gh
+              pkgs.git
+            ] + ":/usr/bin:/bin:/usr/sbin:/sbin";
+          };
           StandardOutPath = "${user.homeDirectory}/Library/Logs/affect-toolbar.log";
           StandardErrorPath = "${user.homeDirectory}/Library/Logs/affect-toolbar.log";
         };
