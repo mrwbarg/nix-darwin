@@ -8,10 +8,6 @@ let
   enableSimpleBar = user.enableSimpleBar or true;
 in
 {
-  imports = [
-    ./aerospace
-  ];
-
   # enable stylix outside of home-manager so we can use colors in other apps
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/${user.theme}.yaml";
   stylix.enable = true;

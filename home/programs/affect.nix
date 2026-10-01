@@ -6,7 +6,6 @@
 {
   imports = [
     ./default.nix
-    ./aerospace/affect.nix
     ./affect-toolbar
   ];
 
