@@ -1,4 +1,4 @@
-{ pkgs, user, ... }:
+{ pkgs, user, lib, ... }:
 let
   enableSimpleBar = user.enableSimpleBar or true;
 in
@@ -31,8 +31,11 @@ in
       defaults write com.apple.Siri 'UserHasDeclinedEnable' -bool true
       defaults write com.apple.assistant.support 'Siri Data Sharing Opt-In Status' -int 2
 
+    ''
+    + lib.optionalString enableSimpleBar ''
       osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
-
+    ''
+    + ''
       /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
     '';
 

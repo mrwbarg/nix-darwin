@@ -107,6 +107,7 @@
             username = "mrwbarg";
             hostname = "macbook-pro";
             theme = "gruvbox-dark-hard";
+            enableSimpleBar = false;
           };
           affect = mkDarwinWorkstation {
             username = "mrwbarg";
