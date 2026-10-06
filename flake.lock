@@ -724,11 +724,11 @@
     "toolbar": {
       "flake": false,
       "locked": {
-        "lastModified": 1788206181,
-        "narHash": "sha256-IPr5oB16hz/Pea/2cJxbWMjxQZDXB+XKE58wxyrF8rE=",
+        "lastModified": 1791228247,
+        "narHash": "sha256-/OflL26jCJC57aT601/AIbhjTgNOsW0g8UagGLbaM0g=",
         "ref": "refs/heads/main",
-        "rev": "9565e5efe36a9aff65af9a9f225a1d916a7fd18e",
-        "revCount": 4,
+        "rev": "c6ee0dbd78759e52580dd09497b9dd69ae16b9fc",
+        "revCount": 18,
         "type": "git",
         "url": "ssh://git@github.com/affect-therapeutics/toolbar"
       },
